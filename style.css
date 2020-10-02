@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&family=Nunito+Sans:wght@300&display=swap');
+
+body {
+  background: #FEAEB5;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.title-todo {
+  font-family: 'Baloo Da 2', cursive;
+}
+
+.container {
+  max-width: 400px;
+}
+
+input[type=text],
+input[type=text]:focus {
+  color: #000;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.todos li {
+  background: #FE8690;
+}
+
+.delete {
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.delete:hover {
+  transform: scale(1.3);
+}
