@@ -1,41 +1,86 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Sunny Kumar">
-  <meta name="description" content="A todo App for taking care for your everydays works">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS-Todo</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-  <!-- Font Awesome Personal Kit -->
-  <script src="https://kit.fontawesome.com/2ebe23cffd.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Sunny Kumar" />
+    <meta
+      name="description"
+      content="A todo App for taking care for your everydays works"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Todo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Font Awesome Personal Kit -->
+    <script
+      src="https://kit.fontawesome.com/2ebe23cffd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container mb-5">
+      <header class="text-center my-4">
+        <h1 class="display-2 mb-4 pt-4 title-todo">Todo List</h1>
+        <form class="search">
+          <input
+            type="text"
+            class="form-control m-auto"
+            name="search"
+            placeholder="Search Todos"
+          />
+        </form>
+      </header>
 
-  <div class="container">
-    <header class="text-center my-4">
-      <h1 class="display-2 mb-4 pt-4 title-todo">Todo List</h1>
-      <form class="search">
-        <input type="text" class="form-control m-auto" name="search" placeholder="Search Todos">
+      <ul class="list-group todos mx-auto">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="mr-1">I am your #default Todo ... Go on add more</span>
+          <i class="fas fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="mr-1">Sunny</span>
+          <i class="fas fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="mr-1">Bunny</span>
+          <i class="fas fa-trash-alt delete"></i>
+        </li>
+      </ul>
+
+      <form class="add text-center text-dark my-4">
+        <label class="mb-1 lead">Add a New Todo...</label>
+        <input type="text" class="form-control m-auto" name="add" />
       </form>
-    </header>
+    </div>
+    <footer
+      class="container-fluid shadow-lg d-flex flex-column flex-sm-row justify-content-around align-items-center"
+    >
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/bunnycodec" class="m-1"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          href="[bunnycodec (Sunny Kumar) · GitHub](https://github.com/bunnycodec)"
+          class="m-1"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="[Sunny Kumar | Bunny (@bit_2_byte) • Instagram photos and videos](https://www.instagram.com/bit_2_byte/)"
+          class="m-1"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="sunnyKumar">
+        Designed & Coded by
+        <a href="https://www.linkedin.com/in/bunnycodec" target="_blank"
+          >Sunny Kumar</a
+        >
+      </div>
+    </footer>
 
-    <ul class="list-group todos mx-auto">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span class="mr-1">I am your #default Todo ... Go on add more</span>
-        <i class="fas fa-trash-alt delete"></i>
-      </li>
-    </ul>
-
-    <form class="add text-center text-dark my-4">
-      <label class="mb-1 lead">Add a New Todo...</label>
-      <input type="text" class="form-control m-auto" name="add">
-    </form>
-
-    
-  </div>
-
-  <script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>

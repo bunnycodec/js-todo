@@ -1,6 +1,7 @@
 const addTodo = document.querySelector('.add')
 const list = document.querySelector('.todos')
 const removeTodo = document.querySelector('.delete')
+const search = document.querySelector('.search input')
 
 const generateTemplate = todo => {
   const html = `
@@ -28,4 +29,20 @@ list.addEventListener('click', e => {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
+})
+
+const result = (term) => {
+  Array.from(list.children)
+    .filter(todo => !todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.add('d-none'))
+
+  Array.from(list.children)
+    .filter(todo => todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.remove('d-none'))
+}
+
+// Search Todos
+search.addEventListener('keyup', () => {
+  const term = search.value.trim().toLowerCase()
+  result(term)
 })

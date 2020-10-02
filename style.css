@@ -3,6 +3,9 @@
 body {
   background: #FEAEB5;
   font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .title-todo {
@@ -32,4 +35,64 @@ input[type=text]:focus {
 
 .delete:hover {
   transform: scale(1.3);
+}
+
+/*  Footer Styling  */
+footer {
+  flex: 0 0 50px;
+  margin-top: auto;
+}
+
+.sunnyKumar {
+  font-family: ‘Josefin Sans’, sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  color: black;
+}
+
+.sunnyKumar a,
+.sunnyKumar a:hover,
+.sunnyKumar a:active,
+.sunnyKumar a:visited {
+  color: #FB2335;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.social-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 100%;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.social-buttons a::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(45deg, #255957, #114B5F);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before {
+  transform: scale(0);
+}
+
+.social-buttons a i {
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i {
+  background: linear-gradient(45deg, #255957, #114B5F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2);
 }
